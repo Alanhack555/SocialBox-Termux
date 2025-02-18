@@ -44,7 +44,7 @@ echo -e "		$Cyan 5 : Brute Force Instagram Account 2 $nc"
 echo -e "		$Cyan 6 : Brute Force Facebook Account 2$nc"
 echo -e "		$Cyan 99: Exit$nc"
 read -p "Choice >  " ch
-if [ $ch = 1 ]; then
+if [ "$ch" = "1" ]; then
 echo -e "			$Cyan Facebook Brute Force$nc"
 echo -e "$green"
 read -p "Enter Facebook ID / Email / Username / Number: " id
@@ -69,7 +69,7 @@ cd .. && bash SocialBox.sh
 else
 exit 1
 fi
-elif [ $ch = 2 ]; then
+elif [ "$ch" = "2" ]; then
 echo -e "			$Cyan Gmail Brute Force$nc"
 cd Gemail-Hack
 python2 gemailhack.py
@@ -90,7 +90,7 @@ cd .. && bash SocialBox.sh
 else
 exit 1
 fi
-elif [ $ch = 3 ]; then
+elif [ "$ch" = "3" ]; then
 echo -e "			$Cyan Instagram Brute Force 1$nc"
 cd instainsane/
 sleep 0.025
@@ -117,7 +117,7 @@ cd .. && bash SocialBox.sh
 else
 exit 1
 fi
-elif [ $ch = 4 ]; then
+elif [ "$ch" = "4" ]; then
 echo -e "			$Cyan Twitter Brute Force$nc"
 cd tweetshell/
 sleep 0.025
@@ -144,7 +144,7 @@ cd .. && bash SocialBox.sh
 else
 exit 1
 fi
-elif [ $ch = 5 ]; then
+elif [ "$ch" = "5" ]; then
 echo -e "			$Cyan Instagram Brute Force 2$nc"
 cd insta-bf/
 sleep 0.025
@@ -171,7 +171,7 @@ cd .. && bash SocialBox.sh
 else
 exit 1
 fi
-elif [ $ch = 6 ]; then
+elif [ "$ch" = "6" ]; then
 echo -e "			$Cyan facebook Brute Force 2$nc"
 cd fikrado.py
 sleep 0.025
@@ -198,7 +198,7 @@ cd .. && bash SocialBox.sh
 else
 exit 1
 fi
-elif [ $ch == 99 ]; then
+elif [ "$ch" == "99" ]; then
 echo -e "$red Program Exit ...$nc"
 sleep 0.25
 exit 1
