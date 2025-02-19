@@ -69,7 +69,7 @@ cd .. && bash SocialBox.sh
 else
 exit 1
 fi
-elif [ $ch = 2 ]; then
+elif [ "$ch" = "2" ]; then
 echo -e "			$Cyan Gmail Brute Force$nc"
 cd Gemail-Hack
 python2 gemailhack.py
