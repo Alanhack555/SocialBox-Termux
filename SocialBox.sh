@@ -43,7 +43,7 @@ echo -e "		$Cyan 99: Exit$nc"
 
 read -p "Choice >  " ch
 
-if [ "$ch" = "1" ]; then
+if [ "$choice" = "1" ]; then
     echo -e "			$Cyan Facebook Brute Force$nc"
     echo -e "$green"
     read -p "Enter Facebook ID / Email / Username / Number: " id
@@ -61,7 +61,7 @@ if [ "$ch" = "1" ]; then
         exit 1
     fi
 
-elif [ "$ch" = "2" ]; then
+elif [ "$choice" = "2" ]; then
     echo -e "			$Cyan Gmail Brute Force$nc"
     cd Gemail-Hack
     python2 gemailhack.py
@@ -75,7 +75,7 @@ elif [ "$ch" = "2" ]; then
         exit 1
     fi
 
-elif [ "$ch" = "3" ]; then
+elif [ "$choice" = "3" ]; then
     echo -e "			$Cyan Instagram Brute Force 1$nc"
     cd instainsane/
     sleep 0.025
@@ -94,7 +94,7 @@ elif [ "$ch" = "3" ]; then
         exit 1
     fi
 
-elif [ "$ch" = "4" ]; then
+elif [ "$choice" = "4" ]; then
     echo -e "			$Cyan Twitter Brute Force$nc"
     cd tweetshell/
     sleep 0.025
@@ -114,7 +114,7 @@ elif [ "$ch" = "4" ]; then
         exit 1
     fi
 
-elif [ "$ch" = "5" ]; then
+elif [ "$choice" = "5" ]; then
     echo -e "			$Cyan Instagram Brute Force 2$nc"
     cd insta-bf/
     sleep 0.025
@@ -134,7 +134,7 @@ elif [ "$ch" = "5" ]; then
         exit 1
     fi
 
-elif [ "$ch" = "6" ]; then
+elif [ "$choice" = "6" ]; then
     echo -e "			$Cyan facebook Brute Force 2$nc"
     # Verifique se 'fikrado.py' é realmente um diretório; se for um arquivo, ajuste este comando
     cd fikrado.py
@@ -155,7 +155,7 @@ elif [ "$ch" = "6" ]; then
         exit 1
     fi
 
-elif [ "$ch" = "99" ]; then
+elif [ "$choice" = "99" ]; then
     echo -e "$red Program Exit ...$nc"
     sleep 0.25
     exit 1
