@@ -1,65 +1,93 @@
 #!/bin/bash
+# Atualiza repositório se estiver em um repositório Git (opcional)
 git pull >> /dev/null
+
+# Define permissões (cuidado com chmod 777)
 chmod 777 -R *
 chmod 777 -R .
-#Sysupdate
+
+# Atualização do sistema
 apt-get update -qq >> /dev/null
-#apt full-upgrade 
-#req
+# apt full-upgrade  (comentado)
+
+# Instalação de dependências
 apt install python2 python tor perl figlet runit openssl -y >> /dev/null
+
 clear
 sleep 2
 figlet Installing ...
-#gmail
+
+# Gmail Brute Force
 figlet gmail bf
 git clone https://github.com/Ha3MrX/Gemail-Hack.git >> /dev/null
 sleep 2
 clear
 figlet Installing ...
 figlet facebook bf
-#facebook
+
+# Facebook Brute Force
 if [ -d facebook ]; then
-        echo "Directory facebook exists.[✔]"
+    echo "Directory facebook exists.[✔]"
 else
-	mkdir facebook
-	cd facebook
-	wget raw.githubusercontent.com/Sup3r-Us3r/scripts/master/fb-brute.pl
-	cd ..
+    mkdir facebook
+    cd facebook
+    wget https://raw.githubusercontent.com/Sup3r-Us3r/scripts/master/fb-brute.pl
+    cd ..
 fi
 sleep 2
 clear
 figlet Installing ...
 figlet instagram bf1
-#Instagram 1
-#git clone https://github.com/umeshshinde19/instainsane.git
-cd instainsane
-chmod +x instainsane.sh
-chmod +x install.sh
-./install.sh
-cd ..
+
+# Instagram Brute Force 1
+if [ -d instainsane ]; then
+    cd instainsane
+    chmod +x instainsane.sh
+    chmod +x install.sh
+    ./install.sh
+    cd ..
+else
+    echo "Directory instainsane not found!"
+fi
 sleep 2
 clear
 figlet Installing ...
 figlet twitter bf
-#Twitter
-#git clone https://github.com/imprithwishghosh/-tweetshell-.git
-cd tweetshell
-chmod +x tweetshell.sh
-chmod +x install.sh
-./install.sh
-cd ..
+
+# Twitter Brute Force
+if [ -d tweetshell ]; then
+    cd tweetshell
+    chmod +x tweetshell.sh
+    chmod +x install.sh
+    ./install.sh
+    cd ..
+else
+    echo "Directory tweetshell not found!"
+fi
 clear
 figlet Installing ...
 figlet instagram bf 2
-# instagram 2
+
+# Instagram Brute Force 2
 git clone https://github.com/samsesh/insta-bf.git
-cd insta-bf 
-bash ./andriod_setup.sh	>> /dev/null
+if [ -d insta-bf ]; then
+    cd insta-bf 
+    # Verifique o nome correto do arquivo abaixo (pode ser android_setup.sh)
+    bash ./andriod_setup.sh >> /dev/null
+    cd ..
+else
+    echo "Failed to clone insta-bf repository."
+fi
 clear
 figlet done
+# Volta para o diretório anterior se necessário
 cd ..
 
-# facebook2
+# Facebook Brute Force 2
 git clone https://github.com/fikrado/fikrado.py
-cd fikrado.py
-bash termux.sh >> /dev/null
+if [ -d fikrado.py ]; then
+    cd fikrado.py
+    bash termux.sh >> /dev/null
+else
+    echo "Failed to clone fikrado.py repository."
+fi
